@@ -1,102 +1,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
-    --dark-blue:#0367A6;
-    --mid-blue:#048ABF;
-    --light-blue:#049DBF;
-    --light-brown:#D9BD8B;
-    --dark-brown:#8C4E2A;
 
+:root{
+    --cor1:#027373;
+    --cor2:#038C7F;
+    --cor3:#A9D9D0;
+    --cor4:#F2E7DC;
+    --cor5:#0D0D0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family: "Lato", sans-serif;
-    background-color: var(--dark-blue);
-    color: var(--light-brown);
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    background-color: var(--cor3);
+}
+h1{
+    padding:  4rem 4rem;
+    color: var(--cor4);
+    font-size: 4rem;
+    text-shadow: 1px 1px black;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-.add-item{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-#input-new-task, #btn-new-task{
-    border: none;
-    font-size: 1rem;
-    outline: none;
-    padding: 1rem;
-}
-
-#input-new-task{
-    width: 20rem;
+.input-box{
+    background-color: #027373;
+    height: 4rem;
+    width: 50%;
     border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin-bottom: 6rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#btn-new-task{
-    background-color: var(--dark-brown);
-    color: var(--dark-blue);
+#input{
+    background-color: transparent;
+    border: none;
+    color: var(--cor4);
+    width: 50%;
+    height: 2rem;
+    outline: none;
+    padding: .5rem;
+    font-size: 1rem;
+
+}
+
+#input::placeholder{
+    color: var(--cor4);
+}
+
+.plus-box{
+    height: 40px;
+    width: 40px;
+    background-color: var(--cor2);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
     cursor: pointer;
+    color: var(--cor4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: .4s;
 }
 
-#btn-new-task:hover{
-    background-color: var(--color-dark3);
+.plus-box:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
 }
 
+.list-box{
+    width: 50%;
+    height: 30rem;
+    background-color: var(--cor4);
 
-
-#to-do-list{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 1rem;
 }
 
-#to-do-list li{
-    list-style-type: none ;
-    font-size: 1.4rem;
+.list-box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;   
+}
+
+.list-box ul li{
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 500;
     text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: .4s;
-}
-
-#to-do-list li:hover{
-    background-color: var(--color-dark3);
-    border-radius: 1rem;
-    padding-left: 1rem;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+    color: var(--cor5);
+    font-family: "Roboto Condensed", sans-serif;;
 }
 
 #btn-ok{
-    background-color: var(--color-green);
-    border: none;
-    border-radius: 50%;
-    color: var(--white);
-    padding: .2rem .4rem;
-    width: 40px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 40px;
+    background-color: var(--cor2);
+    border-radius: 50%;
     cursor: pointer;
+    color: var(--cor4);
+    border: none;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: .4s;
 }
 
 #btn-ok:hover{
-    background-color: var(--color-green2);
+    background-color: var(--cor3);
+    color: var(--cor4);
 }
+
+@media screen and (min-width: 1250px) {
+    .list-box ul li{
+        font-size: 2.2rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .list-box ul li{
+        font-size: 1.2rem;
+    }
+    #btn-ok{
+        height: 30px;
+        width: 30px;
+        font-size: .8rem;
+    }
+    h1{
+        
+        font-size: 3rem;
+        
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .list-box ul li{
+        font-size: 1rem;
+    }
+    h1{
+       
+        font-size: 2rem;
+        
+    }
+    #btn-ok{
+        height: 25px;
+        width: 25px;
+        font-size: .6rem;
+    }
+    #input{
+        font-size: .6rem;
+    
+    }
+  }

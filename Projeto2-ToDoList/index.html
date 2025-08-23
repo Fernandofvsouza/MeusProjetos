@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>To Do List</title>
+    <title>Lista de Tarefas</title>
 </head>
 <body>
-    <h1>Lista de Tarefas
-    </h1>
-    <div class="content">
-        <div class="add-item">
-            <input type="text" id="input-new-task" placeholder="Digite sua task">
-            <button id="btn-new-task" title="Clique aqui para adicionar uma nova task" onclick="newTask()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                  </svg>
-            </button>
-        </div>
-        <div class="body">
-            <ul id="to-do-list">
+    <h1>Lista de Tarefas</h1>
     
+        <div class="input-box">
+            <input type="text"  id="input" placeholder="Digite a Tarefa">
+            <div class="plus-box"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="list-box">
+            <ul class="list">
+                <li id="list-itens">
+                    Comprar Coca Cola
+                    <button id="btn-ok">Ok</button>
+                </li>
+                <li id="list-itens">
+                    Aprender JavaScript
+                </li>
+                <li id="list-itens">
+                    Ir pra escola
+                </li>
             </ul>
         </div>
-    </div>
+   
     
+</body>
+</html>
